@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Analysis Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#analysis">Data Analysis</a></li>
+            <li><a href="#tableau">Tableau Dashboard</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="section intro">
+        <div class="container">
+            <h1>Welcome to the Data Storytelling</h1>
+            <p>Explore the analysis of property host listings through interactive insights, data visualizations, and engaging animations. Let's dive into the world of data!</p>
+            <a href="#analysis" class="button">Explore Analysis</a>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis" class="section analysis">
+        <div class="container">
+            <h2>Jupyter Notebook Analysis</h2>
+            <p>This section includes a step-by-step analysis of the dataset with detailed visualizations and statistical summaries. Click the button below to access the full Jupyter Notebook.</p>
+            <a href="https://link-to-your-notebook" target="_blank" class="button">View Notebook</a>
+        </div>
+    </section>
+
+    <!-- Tableau Dashboard Section -->
+    <section id="tableau" class="section tableau">
+        <div class="container">
+            <h2>Interactive Tableau Dashboard</h2>
+            <p>Explore the interactive dashboard below for a comprehensive view of the data. Use filters to analyze different aspects of the dataset.</p>
+            <iframe src="https://public.tableau.com/views/your-dashboard" width="100%" height="600"></iframe>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="section conclusion">
+        <div class="container">
+            <h2>Conclusion</h2>
+            <p>Through this analysis, we've gained insights into property host listings, prices, reviews, and availability. By leveraging Jupyter Notebook and Tableau, we were able to uncover valuable trends and patterns.</p>
+            <p>Stay tuned for more data stories!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Data Storytelling | Built by [Your Name]</p>
+    </footer>
+
+    <script src="script.js">
+        // Adding event listener for scrolling animations
+window.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('.section');
+    const scrollPosition = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+        if (scrollPosition + window.innerHeight - 100 > sectionPosition) {
+            section.classList.add('show');
+        }
+    });
+});
+
+// Ensure sections are visible when the page loads (for testing)
+document.querySelectorAll('.section').forEach(section => {
+    section.classList.add('show');
+});
+
+    </script>
+
+    
+</body>
+
+
+</html>
+
